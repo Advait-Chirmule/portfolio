@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,61 +7,83 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     title: "Vocab Master",
+    timeline: "Jan 2025 - Present",
     description:
-      "Cross-platform GRE study app (ASP.NET MVC web + Android) with live sync, secure login, game rooms, and SQL Server caching reducing latency by 60%.",
-    image:
-      "https://images.unsplash.com/photo-1529336953121-c9a0522eb1f8?q=80&w=1600&auto=format&fit=crop",
+      "Cross-platform GRE companion combining an ASP.NET MVC web app and native Android client for 100+ learners.",
+    impact: [
+      "Delivered multiplayer drawing games and adaptive practice loops to keep sessions collaborative.",
+      "Integrated Firebase REST APIs for secure authentication and live word list sync.",
+      "Built latency aware sync powered by SQL Server caching that cuts lag by 60 percent.",
+    ],
+    tech: ["ASP.NET", "C#", "JavaScript", "Android", "Firebase", "SQL Server"],
     url: "https://github.com/AdvaitChirmule",
-    tech: ["ASP.NET", "C#", "JavaScript", "AJAX", "Kotlin", "XML", "Firebase"],
   },
   {
     title: "Minibase Software Modification",
+    timeline: "Jan 2024 - May 2024",
     description:
-      "Extended Java DBMS with column-store and bitmap indexes, custom RLE + Bit Stuffing compression, handling 100K rows under 30s.",
-    image:
-      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop",
+      "Extended a teaching database system with column stores, bitmap indexes, and custom compression for faster analytics.",
+    impact: [
+      "Designed a hybrid Run Length Encoding and Bit Stuffing approach to shrink storage while improving query times by 15 percent.",
+      "Validated new storage paths with full CRUD support and join heavy workloads across 100K rows in under 30 seconds.",
+      "Built repeatable benchmarking scripts that run inside a Linux environment for regression tracking.",
+    ],
+    tech: ["Java", "Linux", "Algorithms", "Database Systems", "Git"],
     url: "https://github.com/AdvaitChirmule",
-    tech: ["Java", "Linux", "Algorithms", "Git"],
   },
   {
     title: "Taiga API Extraction",
+    timeline: "Jan 2024 - May 2024",
     description:
-      "Project analytics tool with React frontend, Node middleware, FastAPI backend (OAuth 2.0), Redis caching for 80% faster performance, Dockerized services.",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600&auto=format&fit=crop",
+      "Analytics layer that surfaces Taiga sprint health with a React dashboard and containerized FastAPI services.",
+    impact: [
+      "Implemented OAuth 2.0 secure login and a Node middleware that standardizes project data for the frontend.",
+      "Introduced Redis caching to deliver key metrics 80 percent faster and reduce API strain.",
+      "Packaged the stack with Docker to streamline local onboarding and cloud deployment.",
+    ],
+    tech: ["React", "FastAPI", "Node.js", "Redis", "Docker", "Recharts"],
     url: "https://github.com/AdvaitChirmule",
-    tech: ["React", "FastAPI", "Recharts", "Node.js", "Docker", "Redis", "OAuth 2.0"],
   },
 ];
 
 export default function ProjectsPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 sm:px-10 py-12">
-      <div className="mb-8">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Projects</h1>
-        <p className="text-muted-foreground mt-2">
-          Selected work highlighting product thinking, polish, and performance.
+      <header className="mb-10 space-y-3">
+        <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
+          Selected projects
+        </span>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Projects with measurable outcomes</h1>
+        <p className="text-muted-foreground max-w-3xl">
+          A sampling of research driven and production ready builds where I owned architecture, implementation, and delivery.
         </p>
-      </div>
+      </header>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((p) => (
-          <Card key={p.title} className="overflow-hidden">
-            <div className="aspect-video w-full overflow-hidden">
-              <img src={p.image} alt={p.title} className="h-full w-full object-cover" />
-            </div>
-            <CardHeader>
-              <CardTitle className="text-lg">{p.title}</CardTitle>
+      <div className="grid gap-6">
+        {projects.map((project) => (
+          <Card key={project.title}>
+            <CardHeader className="space-y-2">
+              <CardTitle className="text-2xl">{project.title}</CardTitle>
+              <p className="text-sm text-muted-foreground">{project.timeline}</p>
             </CardHeader>
-            <CardContent className="space-y-3">
-              <p className="text-sm text-muted-foreground">{p.description}</p>
-              <div className="flex flex-wrap gap-2 text-xs">
-                {p.tech.map((t) => (
-                  <span key={t} className="rounded-full border px-2 py-1 text-muted-foreground">{t}</span>
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground">{project.description}</p>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
+                {project.impact.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
+                {project.tech.map((tech) => (
+                  <span key={tech} className="rounded-full border px-2 py-1">
+                    {tech}
+                  </span>
                 ))}
               </div>
               <Button asChild variant="secondary" size="sm">
-                <Link href={p.url}>View project</Link>
+                <Link href={project.url} target="_blank" rel="noreferrer">
+                  View code
+                </Link>
               </Button>
             </CardContent>
           </Card>

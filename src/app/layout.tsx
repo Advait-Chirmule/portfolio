@@ -7,8 +7,14 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Your Name",
-  description: "Personal portfolio showcasing projects, skills, and experience.",
+  title: "Advait Chirmule | Full Stack AI Developer",
+  description:
+    "Full stack AI developer focused on secure cloud platforms, research-driven insights, and production-grade experiences.",
+  openGraph: {
+    title: "Advait Chirmule | Full Stack AI Developer",
+    description:
+      "Portfolio showcasing security automation, large-scale research, and full stack product delivery across AWS and Azure.",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +34,7 @@ export default function RootLayout({
           data-include-search-params="true"
           data-only-in-iframe="true"
           data-debug="true"
-          data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
+          data-custom-data='{"appName": "AdvaitPortfolio", "version": "1.0.0"}'
         />
         <Header />
         <main className="min-h-[calc(100vh-200px)]">{children}</main>

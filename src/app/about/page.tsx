@@ -1,108 +1,120 @@
 "use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+
+const skills = [
+  "Python",
+  "Java",
+  "JavaScript",
+  "C#",
+  "C++",
+  "React",
+  "Next.js",
+  "ASP.NET",
+  "FastAPI",
+  "Node.js",
+  "MySQL",
+  "Postgres",
+  "MongoDB",
+  "AWS",
+  "Azure",
+  "Docker",
+  "Kubernetes",
+  "Terraform",
+  "CI/CD",
+  "AI/ML",
+  "Agile",
+];
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 sm:px-10 py-12">
-      <header className="mb-8 space-y-2">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">About Me</h1>
+      <header className="mb-8 space-y-3">
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">About Advait</h1>
         <p className="text-muted-foreground max-w-3xl">
-          Full‑Stack AI Developer and researcher focused on secure, scalable systems. I build security dashboards, automate cloud vulnerability testing, and run large‑scale social media studies. I care about reliability, performance, and clear UX.
+          I am a full stack AI developer and researcher blending secure cloud engineering with user centered design. My recent focus spans automated security pipelines, large scale social media studies, and dashboards that translate complex data into clear decisions.
         </p>
       </header>
 
       <div className="grid gap-6 lg:grid-cols-3">
         <Card className="lg:col-span-2">
-          <CardContent className="p-6 space-y-4">
-            <h2 className="text-xl font-semibold">Background</h2>
-            <p className="text-muted-foreground">
-              I'm Advait Chirmule, currently pursuing an MS in Computer Science at Arizona State University (Aug 2023 – May 2025). My recent work spans full‑stack development, AI/ML, and cloud security—shipping production dashboards, data pipelines, and research tooling across AWS and Azure.
-            </p>
+          <CardContent className="p-6 space-y-6">
+            <section className="space-y-3">
+              <h2 className="text-xl font-semibold">Education</h2>
+              <div className="rounded-lg border p-4">
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="font-medium text-foreground">Arizona State University</p>
+                  <p className="text-sm text-muted-foreground">Aug 2023 - May 2025</p>
+                </div>
+                <p className="text-sm text-muted-foreground">Master of Science in Computer Science, Tempe, AZ</p>
+              </div>
+            </section>
 
-            <h3 className="text-lg font-semibold">Experience Highlights</h3>
-            <ul className="list-disc pl-5 space-y-2 text-sm text-muted-foreground">
-              <li>Built a security dashboard for enterprise clients to assess and resolve vulnerabilities.</li>
-              <li>Implemented CI/CD across AWS and Azure using Terraform; integrated Azure Defender, OWASP ZAP, and Burp Suite for automated testing.</li>
-              <li>Designed pipelines to extract cloud findings and store them in MongoDB.</li>
-              <li>Led large‑scale user studies (2,000+ participants) with Selenium automation; processed 700K+ posts for sentiment and toxicity analysis.</li>
-              <li>Applied Reinforcement Learning to optimize hashtag strategies, reducing toxic comments by 20%.</li>
-            </ul>
+            <section className="space-y-3">
+              <h2 className="text-xl font-semibold">Experience snapshot</h2>
+              <div className="space-y-4 text-sm text-muted-foreground">
+                <div>
+                  <p className="font-medium text-foreground">Full Stack AI Developer, Cognia Security</p>
+                  <p className="text-xs uppercase tracking-wide text-muted-foreground">May 2025 - Present - Tempe, AZ</p>
+                  <ul className="mt-2 list-disc space-y-2 pl-5">
+                    <li>Leading development of an enterprise security dashboard that surfaces cloud vulnerabilities and remediation paths.</li>
+                    <li>Built Terraform driven CI/CD pipelines that wire in Azure Defender, OWASP ZAP, and Burp Suite for automated testing.</li>
+                    <li>Created ingestion services that consolidate findings into MongoDB for faster triage and reporting.</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium text-foreground">Research Aide, Arizona State University</p>
+                  <p className="text-xs uppercase tracking-wide text-muted-foreground">Aug 2024 - May 2025 - Tempe, AZ</p>
+                  <ul className="mt-2 list-disc space-y-2 pl-5">
+                    <li>Ran social media experiments with 2,000+ participants using Selenium automation for recruitment and validation.</li>
+                    <li>Processed 700K+ posts with Python pipelines, delivering sentiment dashboards in Power BI.</li>
+                    <li>Applied reinforcement learning strategies that lowered toxic comment rates by 20 percent.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
 
-            <h3 className="text-lg font-semibold">Education</h3>
-            <ul className="list-disc pl-5 space-y-2 text-sm text-muted-foreground">
-              <li>
-                <span className="font-medium text-foreground">Arizona State University</span> — MS in Computer Science (Aug 2023 – May 2025), Tempe, AZ
-              </li>
-            </ul>
+            <section className="space-y-3">
+              <h2 className="text-xl font-semibold">Publications</h2>
+              <div className="rounded-lg border p-4 text-sm text-muted-foreground">
+                <p className="font-medium text-foreground">Jailbreaking Proprietary Large Language Models</p>
+                <p>ACL ARR 2024 - Arizona State University</p>
+                <p className="mt-2">Explored cryptographic encoding strategies that increase jailbreak success while automating GPT API experimentation and analytics.</p>
+              </div>
+            </section>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-6 space-y-4">
-            <h2 className="text-xl font-semibold">Skills</h2>
-            <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary">Python</Badge>
-              <Badge variant="secondary">Java</Badge>
-              <Badge variant="secondary">JavaScript</Badge>
-              <Badge variant="secondary">C#</Badge>
-              <Badge variant="secondary">C++</Badge>
-              <Badge variant="secondary">React</Badge>
-              <Badge variant="secondary">Next.js</Badge>
-              <Badge variant="secondary">ASP.NET</Badge>
-              <Badge variant="secondary">FastAPI</Badge>
-              <Badge variant="secondary">Node.js</Badge>
-              <Badge variant="secondary">MySQL</Badge>
-              <Badge variant="secondary">Postgres</Badge>
-              <Badge variant="secondary">MongoDB</Badge>
-              <Badge variant="secondary">AWS</Badge>
-              <Badge variant="secondary">Docker</Badge>
-              <Badge variant="secondary">Kubernetes</Badge>
-              <Badge variant="secondary">CI/CD</Badge>
-              <Badge variant="secondary">Terraform</Badge>
-              <Badge variant="secondary">AI/ML</Badge>
-              <Badge variant="secondary">Agile</Badge>
-            </div>
+            <section className="space-y-3">
+              <h2 className="text-xl font-semibold">Core skills</h2>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <Badge key={skill} variant="secondary">
+                    {skill}
+                  </Badge>
+                ))}
+              </div>
+            </section>
 
-            <div>
-              <h3 className="text-sm font-medium mb-2">Experience</h3>
-              <ul className="text-sm text-muted-foreground space-y-3">
-                <li>
-                  <span className="font-medium text-foreground">Full Stack AI Developer</span> — Cognia Security, Tempe, AZ (May 2025 – Present)
-                  <ul className="list-disc pl-5 mt-1 space-y-1">
-                    <li>Security dashboard for enterprise vulnerability assessment and resolution.</li>
-                    <li>Automated CI/CD with Terraform across AWS & Azure; integrated security testing tools.</li>
-                  </ul>
-                </li>
-                <li>
-                  <span className="font-medium text-foreground">Research Aide</span> — Arizona State University (Aug 2024 – May 2025)
-                  <ul className="list-disc pl-5 mt-1 space-y-1">
-                    <li>Ran large‑scale social media experiments; Selenium automation and data validation.</li>
-                    <li>Processed 700K+ posts with Python (Pandas, NumPy); analytics with Power BI.</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-medium mb-2">Publications</h3>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li>
-                  <span className="font-medium text-foreground">Jailbreaking Proprietary Large Language Models</span> — ACL ARR 2024 (ASU)
-                </li>
-              </ul>
-            </div>
+            <section className="space-y-2 text-sm text-muted-foreground">
+              <h3 className="text-sm font-medium text-foreground">How I work</h3>
+              <p>Blend design thinking with observability to iterate quickly and keep stakeholders aligned.</p>
+              <p>Comfortable leading initiatives end to end or embedding within pods across product, research, and security.</p>
+              <p>Deep focus on data storytelling, automation, and resilient infrastructure.</p>
+            </section>
           </CardContent>
         </Card>
       </div>
 
       <section className="mt-10">
-        <div className="aspect-[21/9] w-full overflow-hidden rounded-xl border">
-          <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2000&auto=format&fit=crop"
-            alt="Coding desk"
-            className="h-full w-full object-cover"
-          />
+        <div className="rounded-xl border bg-muted/30 p-8">
+          <h2 className="text-lg font-semibold">Currently exploring</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Reinforcement learning for community health, agentic workflows for security triage, and ways to turn messy data into accessible narratives.
+          </p>
         </div>
       </section>
     </div>

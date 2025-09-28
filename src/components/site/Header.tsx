@@ -20,17 +20,23 @@ export default function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto max-w-6xl px-6 sm:px-10 h-16 flex items-center justify-between">
         <Link href="/" className="font-semibold tracking-tight">
-          Your Name
+          Advait Chirmule
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
           {nav.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               {item.label}
             </Link>
           ))}
           <Button asChild size="sm">
-            <Link href="/contact">Hire Me</Link>
+            <Link href="/Advait%20Chirmule%20SE%20Resume.pdf" target="_blank" rel="noreferrer">
+              Download Resume
+            </Link>
           </Button>
         </nav>
 
@@ -54,8 +60,13 @@ export default function Header() {
                   </Link>
                 ))}
                 <Button asChild className="mt-2">
-                  <Link href="/contact" onClick={() => setOpen(false)}>
-                    Hire Me
+                  <Link
+                    href="/Advait%20Chirmule%20SE%20Resume.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => setOpen(false)}
+                  >
+                    Download Resume
                   </Link>
                 </Button>
               </div>
