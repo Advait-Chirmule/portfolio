@@ -7,42 +7,67 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     title: "Vocab Master",
-    timeline: "Jan 2025 - Present",
+    timeline: "January 2025 - August 2025",
     description:
-      "Cross-platform GRE companion combining an ASP.NET MVC web app and native Android client for 100+ learners.",
+      "Developed a GRE study app using ASP.NET MVC, C#, JavaScript, Firebase, and AJAX, following OOP principles.",
     impact: [
-      "Delivered multiplayer drawing games and adaptive practice loops to keep sessions collaborative.",
-      "Integrated Firebase REST APIs for secure authentication and live word list sync.",
-      "Built latency aware sync powered by SQL Server caching that cuts lag by 60 percent.",
+      "Enables learners to review word lists and play a drawing game with friends, supporting up to 50 concurrent game rooms.",
+      "Integrated Firebase Realtime Database via RESTful APIs for secure login, real-time word list sync, and game room management.",
+      "Created a time-sliced polling algorithm and SQL Server caching layer that reduced latency by 60%.",
+      "Actively support a user base of around 100 by resolving issues and shipping feedback-driven features.",
     ],
-    tech: ["ASP.NET", "C#", "JavaScript", "Android", "Firebase", "SQL Server"],
-    url: "https://github.com/AdvaitChirmule",
+    tech: ["ASP.NET MVC", "C#", "JavaScript", "Firebase", "AJAX", "SQL Server"],
+    url: "https://vocabmaster.runasp.net/",
   },
   {
     title: "Minibase Software Modification",
-    timeline: "Jan 2024 - May 2024",
+    timeline: "January 2024 - April 2024",
     description:
-      "Extended a teaching database system with column stores, bitmap indexes, and custom compression for faster analytics.",
+      "Improved Minibase (Java DBMS) on Linux by adding column-store support and bitmap indexes for faster queries.",
     impact: [
-      "Designed a hybrid Run Length Encoding and Bit Stuffing approach to shrink storage while improving query times by 15 percent.",
-      "Validated new storage paths with full CRUD support and join heavy workloads across 100K rows in under 30 seconds.",
-      "Built repeatable benchmarking scripts that run inside a Linux environment for regression tracking.",
+      "Designed a custom compression algorithm using Run-Length Encoding and Bit Stuffing tuned for the dataset.",
+      "Delivered 15% faster performance compared to standard RLE while reducing storage footprint.",
+      "Verified CRUD operations and joins on 100K rows executing in under 30 seconds.",
     ],
-    tech: ["Java", "Linux", "Algorithms", "Database Systems", "Git"],
-    url: "https://github.com/AdvaitChirmule",
+    tech: ["Java", "Linux", "Run-Length Encoding", "Bit Stuffing", "Databases"],
+    url: "/",
   },
   {
-    title: "Taiga API Extraction",
-    timeline: "Jan 2024 - May 2024",
+    title: "Taiga API Extraction - Team Clever",
+    timeline: "January 2024 - April 2024",
     description:
-      "Analytics layer that surfaces Taiga sprint health with a React dashboard and containerized FastAPI services.",
+      "Built a Taiga project analysis tool with a React frontend, Node.js middleware, and FastAPI backend secured with OAuth 2.0.",
     impact: [
-      "Implemented OAuth 2.0 secure login and a Node middleware that standardizes project data for the frontend.",
-      "Introduced Redis caching to deliver key metrics 80 percent faster and reduce API strain.",
-      "Packaged the stack with Docker to streamline local onboarding and cloud deployment.",
+      "Surfaced burndown and custom sprint metrics to improve sprint efficiency for customers.",
+      "Integrated Redis caching to improve data retrieval speeds by 80% and containerized services with Docker and Spring Boot for scalable deployment.",
+      "Maintained code quality with SonarQube and collaborated through Agile ceremonies including sprint planning, standups, and code reviews.",
     ],
-    tech: ["React", "FastAPI", "Node.js", "Redis", "Docker", "Recharts"],
-    url: "https://github.com/AdvaitChirmule",
+    tech: ["React", "Node.js", "FastAPI", "Redis", "Docker", "Spring Boot", "Recharts", "SonarQube"],
+    url: "https://github.com/SER516-Clever/SER516-Team-Clever",
+  },
+  {
+    title: "AWS-Powered Application for Image Recognition",
+    timeline: "January 2024 - April 2024",
+    description:
+      "Built an end to end application that processes videos and identifies the celebrities frame by frame",
+    impact: [
+      "Configured an EC2 instance to handle incoming images, forward them to the App Tier, and return recognition results.",
+      "Developed scalable model inference layer using AMI on AWS; auto-scaled from 0 to 20 instances based on load and handled 500 requests in 240 seconds via SQS queues, and stored the result in S3 buckets.",
+    ],
+    tech: ["AWS", "Image Processing", "Python"],
+    url: "/",
+  },
+  {
+    title: "Automatic Music Tagging",
+    timeline: "July 2022 - May 2023",
+    description:
+      "Developed an application that predicts song genre by performing diffent sound and image processing techniques",
+    impact: [
+      "Developed a Flask model that predicts the music genre for a song uploaded by the user with 85% accuracy.",
+      "Extracted features using Mel Spectrogram, MFCC, Spectrogram, FFT, etc. using Python's Librosa library to predict the result using the CNN algorithm, and visualized using R’s tidyverse and tuneR libraries.",
+    ],
+    tech: ["Python", "Sound Processing", "Flask", "R", "Deep Learning", "CNN", "Signal Processing"],
+    url: "https://advaitchirmule.pythonanywhere.com/Music_Predict.html",
   },
 ];
 
@@ -51,11 +76,11 @@ export default function ProjectsPage() {
     <div className="mx-auto max-w-6xl px-6 sm:px-10 py-12">
       <header className="mb-10 space-y-3">
         <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
-          Selected projects
+          Resume projects
         </span>
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Projects with measurable outcomes</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Projects documented in the resume</h1>
         <p className="text-muted-foreground max-w-3xl">
-          A sampling of research driven and production ready builds where I owned architecture, implementation, and delivery.
+          Full stack, database, and analytics work drawn directly from hands-on project experience.
         </p>
       </header>
 

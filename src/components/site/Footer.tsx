@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="space-y-2">
           <div className="font-semibold">Advait Chirmule</div>
           <p className="text-sm text-muted-foreground max-w-prose">
-            Full stack AI developer building secure cloud platforms, research-backed insights, and polished user experiences.
+            Recent Computer Science graduate from Arizona State University focused on full stack development, Agile delivery, and real-time systems.
           </p>
         </div>
         <div className="flex sm:justify-end gap-4 text-sm">

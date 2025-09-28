@@ -7,13 +7,13 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 
 export const metadata: Metadata = {
-  title: "Advait Chirmule | Full Stack AI Developer",
+  title: "Advait Chirmule | Software Engineer",
   description:
-    "Full stack AI developer focused on secure cloud platforms, research-driven insights, and production-grade experiences.",
+    "Recent Computer Science graduate from Arizona State University with full stack development and Agile experience seeking a Software Engineer role.",
   openGraph: {
-    title: "Advait Chirmule | Full Stack AI Developer",
+    title: "Advait Chirmule | Software Engineer",
     description:
-      "Portfolio showcasing security automation, large-scale research, and full stack product delivery across AWS and Azure.",
+      "Arizona State University MSCS graduate with full stack, cloud, and research experience highlighted through resume-backed case studies.",
   },
 };
 

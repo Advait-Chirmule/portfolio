@@ -13,7 +13,7 @@ export default function ContactPage() {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name || "someone"}`);
+    const subject = encodeURIComponent(`Software Engineer opportunity from ${name || "a recruiter"}`);
     const signature = name ? `${name}\n${email}` : email;
     const body = encodeURIComponent(`${message}\n\n-${signature}`);
     window.location.href = `mailto:achirmul@asu.edu?subject=${subject}&body=${body}`;
@@ -24,7 +24,7 @@ export default function ContactPage() {
       <header className="mb-8 space-y-2">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">Contact</h1>
         <p className="text-muted-foreground max-w-2xl">
-          Let us build something resilient together. Share a bit about the opportunity and I will reply within two business days.
+          Please reach out regarding Software Engineer roles or collaborations related to full stack development, cloud automation, or applied research.
         </p>
       </header>
 
@@ -36,7 +36,7 @@ export default function ContactPage() {
                 <label className="block text-sm font-medium mb-1" htmlFor="name">
                   Name
                 </label>
-                <Input id="name" value={name} onChange={(event) => setName(event.target.value)} placeholder="Jane Doe" required />
+                <Input id="name" value={name} onChange={(event) => setName(event.target.value)} placeholder="Your name" required />
               </div>
               <div>
                 <label className="block text-sm font-medium mb-1" htmlFor="email">
@@ -47,7 +47,7 @@ export default function ContactPage() {
                   type="email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                  placeholder="jane@example.com"
+                  placeholder="you@example.com"
                   required
                 />
               </div>
@@ -59,13 +59,13 @@ export default function ContactPage() {
                   id="message"
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
-                  placeholder="Tell me about the role, timeline, and goals."
+                  placeholder="Please share role details or collaboration goals."
                   rows={6}
                   required
                 />
               </div>
               <Button type="submit" className="w-full sm:w-auto">
-                Send message
+                Email Advait
               </Button>
             </form>
           </CardContent>
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
         <div className="space-y-6">
           <div>
-            <h2 className="text-xl font-semibold">Reach me directly</h2>
+            <h2 className="text-xl font-semibold">Direct contact</h2>
             <p className="text-sm text-muted-foreground mt-1">
               Email <a className="underline" href="mailto:achirmul@asu.edu">achirmul@asu.edu</a> or call <a className="underline" href="tel:+14808769732">480-876-9732</a>.
             </p>
@@ -98,16 +98,9 @@ export default function ContactPage() {
             <a className="rounded-lg border p-4 hover:bg-accent" href="/Advait%20Chirmule%20SE%20Resume.pdf" target="_blank" rel="noreferrer">
               Download resume
             </a>
-            <a className="rounded-lg border p-4 hover:bg-accent" href="https://maps.google.com/?q=Tempe,+AZ" target="_blank" rel="noreferrer">
-              Based in Tempe, AZ
-            </a>
-          </div>
-          <div className="rounded-xl overflow-hidden border">
-            <img
-              src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=1600&auto=format&fit=crop"
-              alt="Sunrise over Tempe"
-              className="w-full h-48 object-cover"
-            />
+            <div className="rounded-lg border p-4 text-muted-foreground">
+              Based in Tempe, Arizona
+            </div>
           </div>
         </div>
       </div>

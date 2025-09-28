@@ -6,51 +6,51 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const experiences = [
   {
-    role: "Full Stack AI Developer",
+    role: "Full Stack AI Application Intern",
     company: "Cognia Security",
     time: "May 2025 - Present",
-    location: "Tempe, AZ",
+    location: "Tempe, Arizona",
     summary:
-      "Designing a friendly security mission control so enterprise teams can spot and fix issues before customers feel them.",
+      "Serving as a founding engineer building a security dashboard for enterprise clients to monitor vulnerabilities.",
     highlights: [
-      "Rolled out a Terraform powered pipeline that runs Azure Defender, OWASP ZAP, and Burp Suite so every release ships with confidence.",
-      "Built data flows that collect cloud findings into MongoDB dashboards the whole company can read at a glance.",
-      "Kept momentum high by pairing with product leads, managing work in Linear, and prototyping with Cursor AI when ideas sparked.",
+      "Automated pipelines with SonarQube, Burp Suite, Azure Defender, and OWASP tools, deploying to Azure and AWS with Terraform.",
+      "Developed a Python pipeline that aggregates results, enriches context with Azure KQL, validates findings, and stores them in PostgreSQL dashboards.",
+      "Managed Linear-based Agile workflows to coordinate delivery and code quality with the team.",
     ],
-    tech: ["Terraform", "AWS", "Azure", "MongoDB", "React", "CI/CD"],
+    tech: ["Python", "Terraform", "Azure", "AWS", "PostgreSQL", "Dashboards"],
   },
   {
-    role: "Research Aide",
+    role: "CIS Research Aide",
     company: "Arizona State University",
-    time: "Aug 2024 - May 2025",
-    location: "Tempe, AZ",
+    time: "August 2024 - May 2025",
+    location: "Tempe, Arizona",
     summary:
-      "Explored how hashtags shape conversations, turning 700K+ social posts into insights community teams can trust.",
+      "Studied hashtag effects on engagement and toxicity through large-scale user studies.",
     highlights: [
-      "Welcomed 2,000+ participants into large scale studies with Selenium automations that felt personal, not robotic.",
-      "Built Python pipelines and Power BI stories so researchers and non technical partners could review findings together.",
-      "Used reinforcement learning to dial down toxic comments by 20 percent while keeping engagement upbeat.",
+      "Led seven Twitter experiments with 2,000 participants using Selenium to automate data collection and validation.",
+      "Built an object-oriented Python pipeline that gathered 700K+ social media comments via APIs for analysis.",
+      "Applied multi-objective reinforcement learning to reduce average toxicity scores by 20%.",
     ],
-    tech: ["Python", "Pandas", "NumPy", "Selenium", "Power BI", "RL"],
+    tech: ["Python", "Selenium", "APIs", "Reinforcement Learning", "Data Analysis"],
   },
 ];
 
 const heroHighlights = [
   {
-    value: "100+",
-    label: "Learners practicing daily",
+    value: "2,000",
+    label: "Twitter participants guided across seven studies",
   },
   {
-    value: "20%",
-    label: "Drop in toxic comments",
+    value: "700K+",
+    label: "Social media comments processed with Python pipelines",
+  },
+  {
+    value: "60%",
+    label: "Latency reduction for Vocab Master drawing game",
   },
   {
     value: "80%",
-    label: "Faster sprint recaps",
-  },
-  {
-    value: "2K+",
-    label: "Participants guided with care",
+    label: "Faster Taiga analytics retrieval using Redis caching",
   },
 ];
 
@@ -62,39 +62,35 @@ const heroHighlightColors = [
 ];
 
 const focusAreas = [
-  "Turning security signals into clear stories leaders can act on.",
-  "Pairing data science with design so dashboards feel welcoming, not overwhelming.",
-  "Coaching cross functional teams from kickoff to launch with energy and clarity.",
+  "Security dashboards for enterprise vulnerability monitoring.",
+  "Automated testing pipelines across Azure and AWS using Terraform.",
+  "Python and Azure KQL data workflows that prioritize validated findings.",
 ];
 
 const funStats = [
   {
     value: "60%",
-    label: "Less waiting",
+    label: "Faster gameplay sync",
     description:
-      "SQL Server caching keeps Vocab Master game nights running smoother for friends prepping together.",
-    accent: "from-sky-50 to-indigo-50 dark:from-slate-950 dark:to-indigo-900",
+      "SQL Server caching and a time-sliced polling algorithm keep Vocab Master game rooms responsive for 50 concurrent sessions.",
   },
   {
-    value: "5",
-    label: "Playlists on loop",
+    value: "80%",
+    label: "Quicker sprint metrics",
     description:
-      "Curated mixes fuel focus time, design jams, standups, deep work, and late night debugging.",
-    accent: "from-amber-50 to-orange-100 dark:from-slate-950 dark:to-amber-900",
+      "Redis caching in Taiga API Extraction speeds project analysis dashboards by 80% while staying container-ready with Docker.",
   },
   {
-    value: "3",
-    label: "Research murals",
+    value: "15%",
+    label: "Faster queries",
     description:
-      "Visual storytelling boards make complex data feel like a gallery walk for stakeholders.",
-    accent: "from-emerald-50 to-teal-100 dark:from-slate-950 dark:to-emerald-900",
+      "Custom RLE and Bit Stuffing compression in Minibase delivers 15% faster performance on 100K-row workloads.",
   },
   {
-    value: "24 hrs",
-    label: "Support promise",
+    value: "50%",
+    label: "Faster jailbreak research",
     description:
-      "Every message gets a thoughtful response within a day because collaboration should feel human.",
-    accent: "from-rose-50 to-pink-100 dark:from-slate-950 dark:to-rose-900",
+      "Automated GPT API calls for ACL ARR submission reduced experiment time by 50%.",
   },
 ];
 
@@ -102,20 +98,20 @@ const projects = [
   {
     title: "Vocab Master",
     description:
-      "Cross-platform GRE study app serving 100+ learners with multiplayer gameplay, live sync, and 60% faster latency via SQL Server caching.",
-    tech: ["ASP.NET", "C#", "Android", "Firebase", "SQL Server"],
+      "ASP.NET MVC and C# GRE study app with JavaScript, Firebase, AJAX, and SQL Server caching supporting 100 learners and 50 concurrent game rooms.",
+    tech: ["ASP.NET", "C#", "JavaScript", "Firebase", "AJAX", "SQL Server"],
   },
   {
     title: "Minibase Software Modification",
     description:
-      "Enhanced a Java database with column stores, bitmap indexes, and custom compression to handle 100K rows in under 30 seconds.",
-    tech: ["Java", "Linux", "RLE", "Database Systems"],
+      "Java DBMS enhancements on Linux adding column-store, bitmap indexes, and custom compression tuned for 100K-row joins.",
+    tech: ["Java", "Linux", "Run-Length Encoding", "Bit Stuffing", "Databases"],
   },
   {
     title: "Taiga API Extraction",
     description:
-      "Delivered a React, Node, and FastAPI analytics tool with Redis caching for 80% faster sprint insights.",
-    tech: ["React", "FastAPI", "Node.js", "Redis", "Docker"],
+      "React frontend with Node.js middleware and FastAPI backend (OAuth 2.0) delivering sprint metrics with Redis caching and Docker deployment.",
+    tech: ["React", "Node.js", "FastAPI", "Redis", "Docker", "Recharts"],
   },
 ];
 
@@ -125,13 +121,17 @@ export default function Home() {
       <section className="relative mx-auto max-w-6xl grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center py-16 sm:py-24">
         <div className="space-y-6">
           <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
-            MS CS @ Arizona State University
+            Software Engineer | Arizona State University MSCS 2025 | GPA 3.80
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Advait Chirmule - translating complex systems into welcoming products
+            Advait Chirmule <br></br>
           </h1>
+          <h2>
+            Recent Computer Science grad @ ASU <br></br>
+            Full Stack AI Developer @ Cognia Security
+          </h2>
           <p className="text-muted-foreground text-balance">
-            I help teams tell clearer stories with their technology. From security dashboards to large research studies, my goal is to make every stakeholder feel included, informed, and excited about what we are building.
+            Recent Computer Science graduate from Arizona State University with expertise in full stack development, Agile methodologies, and custom algorithms for real-time systems. Proficient in Java, React, SQL, and AWS, and seeking a Software Engineer position.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild>
@@ -162,7 +162,7 @@ export default function Home() {
         </div>
         <div className="relative w-full overflow-hidden rounded-2xl border bg-muted/30 p-6 shadow-sm">
           <div>
-            <h2 className="text-sm font-semibold text-foreground">What I am focused on</h2>
+            <h2 className="text-sm font-semibold text-foreground">Current focus</h2>
             <ul className="mt-3 space-y-3 text-sm text-muted-foreground">
               {focusAreas.map((entry) => (
                 <li key={entry} className="flex items-start gap-3">
@@ -173,8 +173,8 @@ export default function Home() {
             </ul>
           </div>
           <div className="mt-6 rounded-lg border bg-white/70 p-4 text-sm text-muted-foreground shadow-sm">
-            <div className="font-semibold text-foreground">Tempe, AZ</div>
-            <p>Available for full-time software engineering roles starting 2025.</p>
+            <div className="font-semibold text-foreground">Tempe, Arizona (Open to Relocation)</div>
+            <p>Open to Software Engineer opportunities.</p>
           </div>
         </div>
       </section>
@@ -183,22 +183,20 @@ export default function Home() {
         <div className="rounded-3xl border bg-gradient-to-br from-orange-50 via-white to-lime-50 p-6 shadow-sm dark:from-slate-950 dark:via-slate-950 dark:to-emerald-950 sm:p-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-2">
-              <h2 className="text-2xl font-semibold text-foreground">Friendly stats, real impact</h2>
+              <h2 className="text-2xl font-semibold text-foreground">Impact snapshots</h2>
               <p className="text-sm text-muted-foreground max-w-2xl">
-                A snapshot of the wins I care about most: people feeling confident, teams moving faster, and a little personality along the way.
+                Resume-backed metrics from internships, research, and projects.
               </p>
             </div>
             <Button variant="outline" asChild>
-              <Link href="/contact">Let us collaborate</Link>
+              <Link href="/projects">View Projects</Link>
             </Button>
           </div>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {funStats.map((stat) => (
               <div
                 key={stat.label}
-                className={`rounded-2xl border bg-gradient-to-br p-4 text-sm shadow-sm transition hover:shadow-lg ${
-                  stat.accent
-                }`}
+                className="rounded-2xl border bg-gradient-to-br from-white to-slate-50 p-4 text-sm shadow-sm transition hover:shadow-lg dark:from-slate-950 dark:to-slate-900"
               >
                 <div className="text-2xl font-semibold text-foreground">{stat.value}</div>
                 <p className="text-sm font-medium text-foreground">{stat.label}</p>
@@ -214,7 +212,7 @@ export default function Home() {
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Experience</h2>
             <p className="text-muted-foreground mt-2 max-w-2xl">
-              Stories that bring engineers, designers, and leaders into the same conversation.
+              Roles grounded in security automation, data engineering, and social computing research.
             </p>
           </div>
           <Link
@@ -266,7 +264,7 @@ export default function Home() {
             <CardContent className="p-6 space-y-3">
               <h2 className="text-2xl font-semibold">About</h2>
               <p className="text-muted-foreground">
-                Graduate researcher and builder who thrives at the intersection of security, data, and user experience. My work combines experimentation, automation, and thoughtful design to help teams move faster with confidence.
+                Master of Science in Computer Science candidate at Arizona State University (August 2023 - May 2025) with a 3.80 GPA. Experienced in full stack development, Agile methodologies, and optimizing real-time systems.
               </p>
               <div>
                 <Button variant="outline" asChild>
@@ -277,12 +275,12 @@ export default function Home() {
           </Card>
           <Card className="bg-gradient-to-br from-white to-slate-50 shadow-sm dark:from-slate-950 dark:to-slate-900">
             <CardContent className="p-6 space-y-3">
-              <h3 className="text-lg font-semibold">Snapshot</h3>
+              <h3 className="text-lg font-semibold">Core Skills</h3>
               <ul className="text-sm text-muted-foreground space-y-2">
-                <li>MS Computer Science - Arizona State University (2025)</li>
-                <li>Championing accessible security education</li>
-                <li>Researching how online communities stay kind</li>
-                <li>Partnering with teams from brainstorm to launch</li>
+                <li>Languages: Python, Java, JavaScript, C#, C++, XML, OOP</li>
+                <li>Frontend: React, HTML, CSS, RESTful API, HCI</li>
+                <li>Backend: .NET, MySQL, Postgres, AWS, Docker, Kubernetes</li>
+                <li>Others: Agile, GitHub, AI/ML, Problem Solving, Teamwork</li>
               </ul>
             </CardContent>
           </Card>
@@ -291,9 +289,9 @@ export default function Home() {
 
       <section className="mx-auto max-w-6xl py-12">
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold">Projects</h2>
+          <h2 className="text-2xl font-semibold">Selected Projects</h2>
           <p className="text-sm text-muted-foreground">
-            A few student-led and collaborative builds that showcase problem solving and polish.
+            Technical projects documented in the resume.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
