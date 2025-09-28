@@ -114,7 +114,7 @@ type ChartTooltipContentProps = Omit<
     indicator?: "line" | "dot" | "dashed"
     nameKey?: string
     labelKey?: string
-    payload?: RechartsPrimitive.TooltipProps<any, any>["payload"]
+    payload?: Array<Record<string, unknown>>
   }
 
 function ChartTooltipContent({
